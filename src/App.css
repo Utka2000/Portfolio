@@ -1,5 +1,112 @@
+/* Education tile dark mode fix */
+.dark-mode .card ul li {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+  color: #fff !important;
+  border-left: 4px solid #63b3ed !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3), 0 0 0 1px rgba(99, 179, 237, 0.2);
+}
+.dark-mode .card ul li * {
+  color: #fff !important;
+}
+.dark-mode .card .card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(99, 179, 237, 0.3);
+  border: 1px solid #63b3ed;
+  border-left: 5px solid #63b3ed !important;
+}
+.dark-mode .card .card * {
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  opacity: 1 !important;
+}
+.card .card {
+  background: rgba(255,255,255,0.98);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e9ecef;
+}
+.dark-mode .card .card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  color: #f8f9fa;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4), 0 0 0 1px rgba(99, 179, 237, 0.3);
+  border: 1px solid #63b3ed;
+  border-left: 5px solid #63b3ed !important;
+}
+.card .card strong,
+.card .card span,
+.card .card ul,
+.card .card li,
+.card .card div {
+  color: inherit !important;
+  text-shadow: none;
+}
+.dark-mode {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e9ecef;
+}
+.dark-mode .App-header {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  color: #e9ecef;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.dark-mode .card {
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+  color: #f8f9fa;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.dark-mode .card p,
+.dark-mode .card ul,
+.dark-mode .card li,
+.dark-mode .card strong,
+.dark-mode .card span,
+.dark-mode .card div,
+.dark-mode .card a {
+  color: #f8f9fa !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+.dark-mode .section-title {
+  color: #fff;
+}
+.dark-mode .App-link {
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+  color: #e9ecef;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.dark-mode .App-link:hover {
+  background: linear-gradient(135deg, #533483 0%, #e94560 100%);
+  color: #fff;
+}
+.dark-mode .divider {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+}
+.dark-mode .section-title::after {
+  background: linear-gradient(90deg, #e94560 0%, #533483 100%);
+}
+/* Fade-in animation for section transitions */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .App {
   text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  color: #2c3e50;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  padding-bottom: 4rem;
 }
 
 .App-logo {
@@ -14,18 +121,88 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 3rem 3rem 2.5rem;
+  margin: 3rem auto 2rem;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.App-header:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
 }
 
 .App-link {
-  color: #61dafb;
+  color: #495057;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 0.6em 1.3em;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 1px solid rgba(0,0,0,0.08);
+  display: inline-block;
+}
+.App-link:hover {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/* Card styles for sections */
+.card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  max-width: 800px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #6c757d 0%, #495057 100%);
+  border-radius: 2px;
+}
+
+/* Subtle divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  border: none;
+  margin: 2.5rem auto;
+  max-width: 80%;
 }
 
 @keyframes App-logo-spin {
